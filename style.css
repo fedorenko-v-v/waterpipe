@@ -1,0 +1,1406 @@
+body{
+	background-color: #fff;
+	background-image: url(img/bgHeader.png);
+	background-repeat: repeat-x;
+}
+
+@font-face {
+	font-family: MyriadProRegular;
+	src: url(fonts/myriad/MyriadPro-Regular.otf);
+}
+
+@font-face {
+	font-family: MinionProRegular;
+	src: url(fonts/minion/MinionPro-Regular.otf);
+}
+
+@font-face {
+	font-family: segoeui;
+	src: url(fonts/segoe/segoeui.ttf);
+}
+
+@font-face {
+	font-family: segoeuib;
+	src: url(fonts/segoe/segoeuib.ttf);
+}
+
+@font-face {
+	font-family: segoeuil;
+	src: url(fonts/segoe/segoeuii.ttf);
+}
+
+.wrap{
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.work{
+	max-width: 1200px;
+	margin: auto;
+}
+/**************************** Header ***************************/
+.headerSection{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 120px;
+}
+
+.headerSection .logoBlock{
+	position: relative;
+	float: left;
+	height: 100%;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.headerSection .logoBlock::before{
+	content: '';
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	right: -45px;
+	width: 90px;
+	height: 120px;
+	background: #fff;
+	transform: skewX(-35deg);
+}
+
+.headerSection .logoBlock .logo{
+	position: static;
+	z-index: 1;
+	float: left;
+	width: 255px;
+	height: 85px;
+	background: url(img/logo.png);
+	margin-left: 20px;
+}
+
+.headerSection .phoneBlock{
+	position: relative;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.headerSection .phoneBlock.right{
+	margin-left: 60px;
+}
+
+.headerSection .phoneBlock .phone{
+	position: relative;
+	color: #fff;
+	font-size: 27px;
+	font-family: MyriadProRegular;
+	text-decoration: none;
+}
+
+.headerSection .phoneBlock .phoneMobile{
+	display: none;
+}
+
+.headerSection .phoneBlock .title{
+	position: absolute;
+	left: -20px;
+	bottom: 19px;
+	color: #fff;
+	font-size: 20px;
+	font-family: MyriadProRegular;
+	width: calc(100% + 20px);
+	text-align: right;
+}
+
+.headerSection .phoneBlock .phone::before{
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: -2px;
+	width: 100%;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 1px solid rgba(255,255,255,1);
+}
+/**************************** Header ***************************/
+/**************************** Main menu ***************************/
+.mainMenuSection{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.mainMenuSection::before,
+.mainMenuSection::after{
+	content: '';
+	position: absolute;
+	top: 0px;
+	width: 10px;
+	height: 66px;
+	background-image: url(img/lrMMBG.png);
+}
+
+.mainMenuSection::before{
+	left: 0px;
+	background-position: 0px 0px;
+}
+
+.mainMenuSection::after{
+	right: 0px;
+	background-position: -10px 0px;
+}
+
+.mainMenuSection .listMainMenu{
+	float: left;
+	display: flex;
+	width: calc(100% - 20px);
+	margin-left: 10px;
+	height: 66px;
+	background-image: url(img/mainMenuBG.png);
+	background-repeat: repeat-x;
+}
+
+.mainMenuSection .listMainMenu li{
+	position: relative;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #d5ddd7;
+	font-size: 23px;
+	font-family: MinionProRegular;
+	cursor: pointer;
+}
+
+.mainMenuSection .listMainMenu li::after{
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 3px;
+	height: 100%;
+	background: url(img/mmseparator.png) no-repeat center center;
+}
+
+.mainMenuSection .listMainMenu li:last-child::after{
+	content: none;
+}
+
+.mainMenuSection .listMainMenu li span{
+	position: relative;
+}
+
+.mainMenuSection .listMainMenu li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.mainMenuSection .listMainMenu li.active span::before{
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 1px;
+	background: #d5ddd7;
+}
+/**************************** Main menu ***************************/
+/**************************** Article Section ***************************/
+.articleSection{
+	float: left;
+	width: 100%;
+	padding: 40px 0px;
+}
+
+.titleSection{
+	float: left;
+	width: 100%;
+	font-size: 27px;
+	color: #fff;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: segoeui;
+}
+
+.postSection{
+	float: left;
+	width: 100%;
+	display: flex;
+	margin-top: 40px;
+}
+
+.postSection .leftPost{
+	float: left;
+	width: 450px;
+}
+
+.postSection .leftPost .text{
+	float: left;
+	width: 100%;
+}
+
+.postSection .leftPost .text p{
+	float: left;
+	width: 100%;
+	font-size: 22px;
+	color: #464646;
+	font-family: MyriadProRegular;
+	line-height: 29px;
+	margin-bottom: 12px;
+}
+
+.postSection .leftPost .text p.segoefont{
+	font-family: segoeui;
+}
+
+.postSection .leftPost .infoBlock{
+	float: left;
+	width: calc(100% - 60px);
+	height: 85px;
+	box-sizing: border-box;
+	padding: 12px 22px;
+	margin-top: 15px;
+	background: url(img/infoBlock.png) repeat-x;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.postSection .leftPost .infoBlock .phone{
+	float: left;
+	width: 100%;
+	font-size: 30px;
+	color: #fff;
+	font-family: segoeuib;
+	text-align: center;
+}
+
+.postSection .leftPost .infoBlock .titleInfo{
+	float: left;
+	width: 100%;
+	font-size: 24px;
+	color: #fff;
+	font-family: segoeui;
+	text-align: center;
+}
+
+.postSection .rightPost{
+	float: left;
+	width: calc(100% - 450px);
+	background: url(img/car.png) no-repeat top center;
+	background-size: contain;
+}
+/**************************** Article Section ***************************/
+/**************************** worksWrap ***************************/
+.wrap.worksWrap{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+	background: #022e49;
+	margin-top: 40px;
+}
+
+.wrap.worksWrap::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: inherit;
+	top: 0px;
+	transform-origin: left top;
+	transform: skewY(-3deg);
+	z-index: 0;
+}
+
+.worksSection{
+	position: relative;
+	z-index: 1;
+	float: left;
+	width: 100%;
+	padding: 25px 0px;
+}
+
+.titleSection.works{
+	text-align: center;
+}
+
+.titleSection.works span{
+	position: relative;
+}
+
+.titleSection.works span::before{
+	content: '';
+	position: absolute;
+	top: -25px;
+	left: 0px;
+	width: 100%;
+	border-top: 1px dashed #fff;
+}
+
+.worksSection .textInfo{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 26px;
+	font-family: MyriadProRegular;
+	color: #fff;
+	line-height: 29px;
+	margin-top: 45px;
+}
+
+.worksSection .ListTextInfo{
+	float: left;
+	width: 100%;
+	text-align: left;
+	font-size: 26px;
+	font-family: MyriadProRegular;
+	color: #fff;
+	line-height: 29px;
+	margin-top: 45px;
+}
+
+.worksSection .phoneInfo{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 27px;
+	font-family: MyriadProRegular;
+	color: #ed3002;
+	line-height: 29px;
+	margin-top: 20px;
+}
+
+.worksSection .phoneInfo a{
+	color: #ed3002;
+	text-decoration: none;
+}
+
+.worksSection .phoneInfo span{
+	position: relative;
+}
+
+.worksSection .phoneInfo span::before{
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: 1px;
+	width: 100%;
+	height: 1px;
+	background-color: #ed3002;
+}
+
+.textWorks{
+	float: left;
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
+	padding: 0px 100px;
+	margin-top: 40px;
+}
+
+.textWorks .leftT{
+	float: left;
+	width: 250px;
+	color: #fff;
+	font-size: 22px;
+	font-family: segoeui;
+	text-align: right;
+	padding: 10px 0px;
+	padding-right: 30px;
+	border-right: 3px solid #fff;
+	text-transform: uppercase;
+	line-height: 36px;
+}
+
+.textWorks .rightT{
+	float: left;
+	width: calc(100% - 250px);
+	padding: 10px 0px;
+	padding-left: 30px;
+}
+
+.textWorks .rightT .listRightT{
+	float: left;
+	width: 100%;
+}
+
+.textWorks .rightT .listRightT li{
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-size: 22px;
+	font-family: segoeui;
+	margin: 8px 0px;
+}
+/**************************** worksWrap ***************************/
+/**************************** steps Wrap ***************************/
+.wrap.stepsWrap{
+	position: relative;
+	background-color: #197bba;
+}
+
+.wrap.stepsWrap::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: inherit;
+	z-index: 1;
+	bottom: 0;
+	transform-origin: left bottom;
+	transform: skewY(3deg);
+}
+
+.wrap.stepsWrap::after{
+	content: '';
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #022d47;
+	z-index: 0;
+	bottom: -20px;
+	transform-origin: left bottom;
+	transform: skewY(3deg);
+}
+
+.stepsSection{
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: 100%;
+}
+
+.stepsSection .stepsBlocks{
+	float: left;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding: 0px 0px;
+	margin: 30px 0px;
+}
+
+.stepsSection .stepsBlocks .step{
+	float: left;
+	width: calc(50% - 60px);
+	box-sizing: border-box;
+	padding: 30px 0px 30px 95px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	margin-left: 60px;
+}
+
+.stepsSection .stepsBlocks .step:nth-child(2n+1){
+	border-right: 1px solid #fff;
+}
+
+.stepsSection .stepsBlocks .step:nth-child(1){
+	background-image: url(img/step1.png);
+}
+
+.stepsSection .stepsBlocks .step:nth-child(2){
+	background-image: url(img/step2.png);
+}
+
+.stepsSection .stepsBlocks .step:nth-child(3){
+	background-image: url(img/step3.png);
+}
+
+.stepsSection .stepsBlocks .step:nth-child(4){
+	background-image: url(img/step4.png);
+}
+
+.stepsSection .stepsBlocks .step .title{
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-size: 32px;
+	font-family: segoeui;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.stepsSection .stepsBlocks .step .text{
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-size: 23px;
+	font-family: segoeui;
+	font-weight: normal;
+	margin-top: 7px;
+}
+/**************************** steps Wrap ***************************/
+/**************************** services ***************************/
+.wrap.servicesWrap{
+	background-image: url(img/servicesBG.png);
+	background-repeat: no-repeat;
+	background-position: 100px center;
+}
+
+.titleSection.services{
+	text-align: center;
+	color: #000;
+}
+
+.servicesSection{
+	float: left;
+	width: 100%;
+	margin-top: 140px;
+}
+
+.servicesText{
+	float: left;
+	width: 100%;
+}
+
+.servicesText p{
+	float: left;
+	width: 100%;
+	font-family: MyriadProRegular;
+	font-size: 27px;
+	margin-top: 40px;
+}
+
+.servicesText ul{
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.servicesText ul li{
+	float: left;
+	width: 100%;
+	margin: 5px 0px;
+	color: #454545;
+	font-size: 22px;
+	font-family: MyriadProRegular;
+}
+
+.servicesText .lineServiceText{
+	float: left;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.servicesText .lineServiceText .btn{
+	background-image: url(img/btnS.png);
+	background-repeat: repeat-x;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 24px;
+	font-family: segoeui;
+	height: 57px;
+	display: flex;
+	align-items: center;
+	padding: 0px 15px;
+	cursor: pointer;
+}
+
+.servicesText .lineServiceText .btn span{
+	margin-bottom: 5px;
+}
+
+.garantySection{
+	position: relative;
+	float: left;
+	width: 100%;
+	margin: 60px 0px;
+}
+
+.garantySection::before{
+	content: '';
+	position: absolute;
+	z-index: 0;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+	background-color: #197bba;
+}
+
+.garanryContent{
+	position: relative;
+	z-index: 1;
+	float: left;
+	width: 100%;
+	background: #fff;
+	display: flex;
+}
+
+.garanryContent .leftTitle{
+	position: relative;
+	flex-grow: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 47px;
+	color: #fff;
+	font-family: segoeui;
+	background-color: #197bba;
+	text-transform: uppercase;
+	text-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.garanryContent .leftTitle::after{
+	content: '';
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	right: -95px;
+	width: 100%;
+	height: 100%;
+	background: #197bba;
+	transform: skewX(25deg);
+	}
+
+.garanryContent .leftTitle .text{
+	position: relative;
+	z-index: 1;
+}
+
+.garanryContent .leftTitle span{
+	display: inline-block;
+	font-size: 89px;
+	margin-bottom: 10px;
+}
+
+.garanryContent .rightBlock{
+	flex-grow: 1;
+	overflow: hidden;
+}
+
+.garanryContent .rightBlock .lineRightBlock{
+	float: left;
+	width: 100%;
+	min-height: 86px;
+	background: #e9e9e9;
+	margin: 7px 0px;
+	display: flex;
+	align-items: center;
+	font-size: 22px;
+	color: #454545;
+	font-family: segoeui;
+}
+
+.garanryContent .rightBlock .lineRightBlock:nth-child(1){
+	padding-left: 250px;
+}
+
+.garanryContent .rightBlock .lineRightBlock:nth-child(2){
+	padding-left: 300px;
+}
+
+.garanryContent .rightBlock .lineRightBlock:nth-child(3){
+	padding-left: 350px;
+}
+
+.garanryContent .rightBlock .lineRightBlock span{
+	color: #00609c;
+}
+
+.garanryContent .rightBlock .lineRightBlock .lineContent{
+	position: relative;
+}
+
+.garanryContent .rightBlock .lineRightBlock .lineContent::before{
+	content: '';
+	position: absolute;
+	left: -120px;
+	top: 50%;
+	margin-top: -45px;
+	width: 90px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.garanryContent .rightBlock .lineRightBlock:nth-child(1) .lineContent::before{
+	background-image: url(img/lineContent1.png);
+}
+
+.garanryContent .rightBlock .lineRightBlock:nth-child(2) .lineContent::before{
+	background-image: url(img/lineContent2.png);
+}
+
+.garanryContent .rightBlock .lineRightBlock:nth-child(3) .lineContent::before{
+	background-image: url(img/lineContent3.png);
+}
+/**************************** services ***************************/
+/**************************** clients ***************************/
+.wrap.clientsWrap{
+	position: relative;
+	background-color: #197bba;
+}
+
+.wrap.clientsWrap::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: inherit;
+	z-index: 1;
+	bottom: 0;
+	transform-origin: left bottom;
+	transform: skewY(3deg);
+}
+
+.wrap.clientsWrap::after{
+	content: '';
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #022d47;
+	z-index: 0;
+	bottom: -20px;
+	transform-origin: left bottom;
+	transform: skewY(3deg);
+}
+
+.wrap.clientsWrap .sepL{
+	position: absolute;
+	z-index: 3;
+	top: 45px;
+	left: 0px;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px dashed #464646;
+}
+
+.clientsSection{
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: 100%;
+	margin: 80px 0px;
+}
+
+.titleSection.clients{
+	text-align: center;
+	text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.subtitleS{
+	float: left;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 26px;
+	font-family: MyriadProRegular;
+	margin-top: 20px;
+	line-height: 29px;
+	text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sliderReview{
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	box-sizing: border-box;
+	padding: 0px 80px;
+}
+
+.sliderReview *{
+	outline: none;
+}
+
+.sliderReview .slick-arrow{
+	position: absolute;
+	top: 50%;
+	width: 20px;
+	height: 66px;
+	background-image: url(img/slick-arrow.png);
+	border: none;
+	font-size: 0px;
+	margin-top: -33px;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.sliderReview .slick-arrow.slick-prev{
+	left: 20px;
+	background-position: 0px 0px;
+}
+
+.sliderReview .slick-arrow.slick-next{
+	right: 20px;
+	background-position: -20px 0px;
+}
+
+.sliderReview .slideReview{
+	float: left;
+	width: 100%;
+}
+
+.sliderReview .slideReview .imgReview{
+	float: left;
+	width: 160px;
+	display: flex;
+	justify-content: center;
+}
+
+.sliderReview .slideReview .imgReview img{
+	max-width: 100%;
+	height: auto;
+}
+
+.sliderReview .slideReview .textReview{
+	float: left;
+	width: calc(100% - 190px);
+	margin-left: 30px;
+	background-color: #72aed5;
+	box-sizing: border-box;
+	padding: 20px 15px;
+}
+
+.sliderReview .slideReview .textReview .title{
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-size: 26px;
+	font-family: segoeui;
+}
+
+.sliderReview .slideReview .textReview .text{
+	position: relative;
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-size: 22px;
+	font-family: segoeuil;
+	line-height: 29px;
+	margin-top: 15px;
+	box-sizing: border-box;
+	padding: 0px 30px;
+}
+
+.sliderReview .slideReview .textReview .text::before{
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 0px;
+	width: 18px;
+	height: 12px;
+	background-image: url(img/quoteL.png);
+}
+
+.sliderReview .slideReview .textReview .text .quoteR{
+	display: inline-block;
+	width: 18px;
+	height: 12px;
+	background-image: url(img/quoteL.png);
+	margin-left: 10px;
+}
+/**************************** clients ***************************/
+/**************************** contacts ***************************/
+.contactsSection{
+	float: left;
+	width: 100%;
+	padding: 70px 0px;
+	padding-top: 130px;
+}
+
+.titleSection.contacts{
+		color: #0b6caa;
+		text-align: center;
+}
+
+.subtitleS.contacts{
+	color: #444444;
+	text-shadow: none;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#formContacts{
+	width: 750px;
+	margin: auto;
+}
+
+#formContacts .leftForm{
+	float: left;
+	width: calc(50% - 15px);
+}
+
+#formContacts .leftForm .inp{
+	float: left;
+	width: 100%;
+	box-sizing: border-box;
+	height: 46px;
+	margin-bottom: 20px;
+	padding: 0px 10px;
+	outline: none;
+}
+
+#formContacts .leftForm .captcha{
+	float: left;
+	width: 100%;
+	background: #16699d;
+	display: flex;
+	height: 76px;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 22px;
+	font-family: MyriadProRegular;
+}
+
+#formContacts .rightForm{
+	float: left;
+	width: calc(50% - 15px);
+	margin-left: 30px;
+}
+
+#formContacts .rightForm .sendMess{
+	float: left;
+	width: 100%;
+	background-color: #ef3b07;
+	display: flex;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 33px;
+	font-family: segoeui;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	outline: none;
+}
+/**************************** contacts ***************************/
+/**************************** map ***************************/
+.wrap.mapWrap{
+	float: left;
+	width: 100%;
+}
+
+.wrap.mapWrap #map{
+	float: left;
+	width: 100%;
+	height: 400px;
+	background: url(img/map.jpg) no-repeat top center;
+}
+/**************************** map ***************************/
+/**************************** footer ***************************/
+.wrap.footerWrap{
+	background-color: #197bba;
+}
+
+.footerSection{
+	float: left;
+	width: 100%;
+	padding: 30px 0px;
+}
+
+.footerSection .leftFooter{
+	float: left;
+	width: 60%;
+	color: #fff;
+	font-size: 22px;
+	line-height: 29px;
+	font-family: MyriadProRegular;
+}
+
+.footerSection .rightFooter{
+	float: left;
+	width: 40%;
+	color: #fff;
+	font-size: 22px;
+	line-height: 29px;
+	font-family: MyriadProRegular;
+	text-align: right;
+}
+
+.footerSection .rightFooter a{
+	color: #fff;
+	text-decoration: none;
+}
+/**************************** footer ***************************/
+
+@media only screen and (max-width: 1200px){
+	.titleSection.works span::before{
+		top: -15px;
+	}
+	.garanryContent .leftTitle .text{
+		margin-left: 10px;
+	}
+
+	.footerSection{
+		box-sizing: border-box;
+		padding: 10px;
+	}
+
+	.worksSection,
+	.servicesSection,
+	.articleSection{
+		box-sizing: border-box;
+		padding: 30px 10px;
+	}
+
+	.headerSection .phoneBlock.right{
+		margin-right: 10px;
+	}
+}
+
+@media only screen and (max-width: 1023px){
+	.garanryContent .leftTitle::after{
+		content: none;
+	}
+
+	.garanryContent{
+		flex-wrap: wrap;
+	}
+
+	.garanryContent .leftTitle{
+		flex-grow: 1;
+		justify-content: center;
+	}
+
+	.garanryContent .leftTitle .text br{
+		display: none;
+	}
+
+	.garanryContent .rightBlock .lineRightBlock{
+		margin: 20px 0px;
+	}
+
+	.garanryContent .rightBlock .lineRightBlock:nth-child(1),
+	.garanryContent .rightBlock .lineRightBlock:nth-child(2),
+	.garanryContent .rightBlock .lineRightBlock:nth-child(3){
+		padding-left: 150px;
+	}
+}
+
+@media only screen and (max-width: 900px){
+	.postSection .leftPost{
+			width: 100%;
+	}
+
+	.postSection .leftPost .infoBlock{
+		max-width: 450px;
+	}
+
+	.postSection .rightPost{
+		display: none;
+	}
+
+	.stepsSection .stepsBlocks .step{
+		width: calc(50% - 20px);
+		margin-left: 20px;
+	}
+
+	.stepsSection .stepsBlocks .step .title{
+		font-size: 28px;
+	}
+
+	.servicesText .lineServiceText{
+		margin-top: 25px;
+	}
+
+	.headerSection .phoneBlock.right{
+		margin-left: 30px;
+	}
+
+	.headerSection .phoneBlock .phone{
+		font-size: 20px;
+	}
+
+	.headerSection .phoneBlock{
+		display: block;
+		padding-top: 30px;
+	}
+
+	.headerSection .phoneBlock .title{
+		bottom: 60px;
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	#formContacts{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0px 10px;
+	}
+
+	.sliderReview .slideReview .imgReview{
+		display: none;
+	}
+
+	.sliderReview .slideReview .textReview{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.textWorks{
+		padding: 0px 20px;
+	}
+
+	.stepsSection .stepsBlocks .step .title{
+		font-size: 20px;
+	}
+
+	.stepsSection .stepsBlocks .step .text{
+		font-size: 16px;
+	}
+
+	.headerSection .phoneBlock{
+		display: none;
+	}
+
+	.headerSection .phoneBlock.right{
+		display: block;
+	}
+
+	.headerSection .phoneBlock{
+		padding-top: 10px;
+	}
+
+	.headerSection .phoneBlock .title{
+		bottom: 40px;
+	}
+
+	.headerSection .phoneBlock .phoneMobile{
+		display: block;
+		color: #fff;
+    font-size: 20px;
+    font-family: MyriadProRegular;
+	}
+}
+
+@media only screen and (max-width: 639px){
+	.footerSection .leftFooter,
+	.footerSection .rightFooter{
+		font-size: 16px;
+	}
+
+	.servicesText .lineServiceText .btn{
+		text-align: center;
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 539px){
+	.sliderReview{
+		padding: 0px 60px;
+	}
+
+	.footerSection{
+		display: flex;
+		flex-wrap: wrap-reverse;
+	}
+
+	.footerSection .leftFooter,
+	.footerSection .rightFooter{
+		width: 100%;
+		text-align: center;
+	}
+
+	.footerSection .rightFooter{
+		margin-bottom: 10px;
+	}
+
+	#formContacts .leftForm{
+		width: 100%;
+	}
+
+	#formContacts .rightForm{
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+
+	.mainMenuSection .listMainMenu li{
+		font-size: 18px;
+	}
+
+	.stepsSection .stepsBlocks .step{
+		width: 100%;
+	}
+
+	.stepsSection .stepsBlocks .step:nth-child(2n+1){
+		border: none;
+	}
+
+	.garanryContent .leftTitle{
+		padding: 20px 0px;
+	}
+
+	.garanryContent .leftTitle{
+		font-size: 36px;
+	}
+
+	.garanryContent .leftTitle span{
+		font-size: 48px;
+	}
+
+	.titleSection.works span::before{
+		content: none;
+	}
+
+	.wrap.worksWrap::before,
+	.wrap.clientsWrap::before,
+	.wrap.clientsWrap::after,
+	.wrap.stepsWrap::before,
+	.wrap.stepsWrap::after{
+		content: none;
+	}
+
+	.headerSection .logoBlock .logo{
+		width: 200px;
+		height: 67px;
+		background-size: cover;
+	}
+
+	.servicesSection{
+		margin-top: 20px;
+	}
+
+	.garanryContent .rightBlock .lineRightBlock .lineContent::before{
+		width: 40px;
+		height: 40px;
+		background-size: cover;
+		top: 50%;
+		left: -50px;
+		margin-top: -20px;
+	}
+
+	.garanryContent .rightBlock .lineRightBlock:nth-child(1),
+	.garanryContent .rightBlock .lineRightBlock:nth-child(2),
+	.garanryContent .rightBlock .lineRightBlock:nth-child(3){
+		padding-left: 60px;
+	}
+
+	.garanryContent .rightBlock .lineRightBlock{
+		display: block;
+		box-sizing: border-box;
+		min-height: inherit;
+		padding: 20px 0px;
+		margin: 10px 0px;
+	}
+
+	.garanryContent .rightBlock .lineRightBlock:nth-child(1){
+		margin-top: 20px;
+	}
+}
+
+
+@media only screen and (max-width: 479px){
+	.headerSection .logoBlock .logo{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.headerSection .logoBlock::before{
+		content: none;
+	}
+
+	.mainMenuSection .listMainMenu li{
+		font-size: 16px;
+	}
+
+	.textWorks{
+		flex-wrap: wrap;
+		padding: 0px 10px;
+	}
+
+	.textWorks .leftT{
+		padding-right: 10px;
+		width: 100%;
+		border-right: none;
+		border-bottom: 2px solid #fff;
+	}
+
+	.textWorks .rightT{
+		width: 100%;
+	}
+
+	.textWorks .rightT .listRightT li{
+		position: relative;
+		padding-left: 20px;
+	}
+
+	.textWorks .rightT .listRightT li::before{
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: 0px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #fff;
+	}
+
+	.headerSection .phoneBlock.right{
+		margin-left: 10px;
+	}
+
+	.postSection .leftPost .infoBlock .phone{
+		font-size: 24px;
+	}
+
+	.postSection .leftPost .infoBlock .titleInfo{
+		font-size: 18px;
+	}
+
+	.worksSection .ListTextInfo{
+		font-size: 20px;
+	}
+
+	.sliderReview .slideReview .textReview .text{
+		font-size: 14px;
+		line-height: 16px;
+		margin-top: 15px;
+		padding: 0px 25px;
+	}
+}
+
+@media only screen and (max-width: 399px){
+	.headerSection{
+		height: auto;
+	}
+
+	.headerSection .logoBlock{
+		width: 100%;
+		height: 100px;
+	}
+
+	.headerSection .phoneBlock.right{
+		height: 90px;
+	}
+
+	.headerSection .phoneBlock .title{
+		bottom: 10px;
+	}
+
+	.articleSection .titleSection{
+		color: #000;
+	}
+	.postSection .leftPost .infoBlock{
+		width: 100%;
+	}
+
+	.mainMenuSection .listMainMenu{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.mainMenuSection::before,
+	.mainMenuSection::after{
+			content: none;
+	}
+}
+
+@media only screen and (max-width: 360px){
+	.mainMenuSection .listMainMenu li{
+		font-size: 14px;
+	}
+}
